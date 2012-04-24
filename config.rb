@@ -7,9 +7,11 @@
 # require 'susy'
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  # :style options include :nested, :expanded, :compact, and :compressed
+  config.output_style = :nested
+  config.sass_options = { :line_comments => false, :debug_info => true }
+end
 
 ###
 # Haml
@@ -84,9 +86,16 @@ configure :build do
   
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  compass_config do |config|
+    # :style options include :nested, :expanded, :compact, and :compressed
+    config.output_style = :expanded
+    config.sass_options = { :line_comments => true, :debug_info => false }
+  end
+
 end

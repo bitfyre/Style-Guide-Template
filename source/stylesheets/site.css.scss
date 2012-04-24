@@ -16,7 +16,7 @@ $col-width: 4em;
 $gutter-width: 1em;
 $side-gutter-width: $gutter-width;
 
-@include global-reset;
+@import "lib/normalize/normalize";
 
 body {
   font-family: $font-family;
