@@ -10,6 +10,7 @@ gem "haml", "~> 3.1.4"
 gem "sass", "~> 3.1.15"
 
 group :development do
+  # Mainly so we can use `html2haml`
   gem "hpricot", "~> 0.8.6"
   gem "erubis", "~> 2.7.0"
   gem "ruby_parser", "~> 2.3.1"
