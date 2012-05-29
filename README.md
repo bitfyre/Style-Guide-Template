@@ -1,5 +1,5 @@
-Bitfyre Boilerplate
-===================
+Unnamed Boilerplate Style Guide
+===============================
 
 License
 -------
