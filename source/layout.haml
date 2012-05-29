@@ -38,11 +38,12 @@
     / Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'
     :javascript
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')
+      if (typeof jQuery == 'undefined') {
+          document.write(unescape("%3Cscript src='/javascripts/lib/public/jquery-1.7.2.js' type='text/javascript'%3E%3C/script%3E"));
+      }
     / scripts concatenated and minified via build script
-    
-    / end scripts
-
+    = javascript_include_tag 'plugins.js'
+    = javascript_include_tag 'site.js'
     /
       Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
       mathiasbynens.be/notes/async-analytics-snippet
@@ -50,4 +51,5 @@
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+        s.parentNode.insertBefore(g,s)}(document,'script'));    
+    / end scripts
