@@ -1,0 +1,24 @@
+// Typography Mixins -----------------------------------------------------
+
+//**
+// @param $mb Margin after the header style in ems relative to font-size
+// @param $color Header type color in hex color
+// @param $ff Font Family, predefind variable
+// @param $fz Font Size in ems, relative to body size
+// @param $fw Font weight as integer an
+// @param $lh Line Height as a floating point number
+// @param $tt Text transform
+// @param $bgc background color, only if defind
+//
+@mixin header-style($mb, $color, $ff, $fz, $fw, $lh, $tt, $bgc: none) {
+  margin-bottom:      pxs2ems($mb, $fz);
+  color:              $color;
+  font-family:        $ff;
+  font-size:          pxs2ems($fz);
+  font-weight:        $fw;
+  line-height:        ($lh / $fz);
+  text-transform:     $tt;
+  @if $bgc != none {
+    background-color: $bgc;
+  }
+}

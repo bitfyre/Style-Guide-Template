@@ -1,0 +1,66 @@
+/* --------------------------------------------------------------------------------------------- */
+/* Shared:Typography */
+
+/* Because it's really all about the content. Nothing else matters.
+//   Not the drop shadows, not the gradients, not to use Gotham vs Proxima Nova
+//   None of that matters if the content is crap and unreadable 
+   It all starts here */
+/* --------------------------------------------------------------------------------------------- */
+
+/*  Give our selves some defaults just 
+    in case
+---------------------------------------- */
+$font-color:      #333 !default;
+$font-family:     "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, "Nimbus Sans L", sans-serif !default;
+$font-size:       100% !default;
+$line-height:     1.5 !default;
+$heading-family:  $font-family !default;
+
+body {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  vertical-align: text-bottom;
+}
+
+/*  The Paragaph, Root of all Content
+---------------------------------------- */
+p {
+  margin-top: 0;
+}
+
+/*  Linkypoos 
+    (In memory of the Rissington Podcast)
+---------------------------------------- */
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px dotted $link-color;
+
+  &:active {
+    color: $link-active-color;
+  }
+  &:hover {
+    color: $link-hover-color;
+    border-bottom-style: solid;
+    border-bottom-color: $link-hover-color;
+  }
+  &:focus {
+    color: $link-focus-color;
+    border-bottom-style: solid;
+    border-bottom-color: $link-focus-color;
+  }
+}
+
+/* Not quite so typography related
+---------------------------------------- */
+img, svg, object, embed, video, audio {
+  max-width: 100% !important;
+}
+
+/* List Tweaks
+---------------------------------------- */
+ol, ul {
+  padding-left: 1.25em;
+}

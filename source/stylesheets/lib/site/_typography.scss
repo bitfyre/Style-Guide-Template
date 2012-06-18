@@ -1,0 +1,73 @@
+/* --------------------------------------------------------------------------------------------- */
+/* Site:Typography */
+
+/* Because it's really all about the content. Nothing else matters.
+//   Not the drop shadows, not the gradients, not to use Gotham vs Proxima Nova
+//   None of that matters if the content is crap and unreadable 
+   It all starts here */
+/* --------------------------------------------------------------------------------------------- */
+
+/* Class Based Header Styling
+  http://www.stubbornella.org/content/2011/09/06/style-headings-using-html5-sections/
+  Of course I'll use the Jeremy Keith Style
+---------------------------------------- */
+.peta {
+}
+.tera {
+}
+.giga {
+}
+.mega {
+}
+.kilo {
+}
+.hecto {
+}
+.deca {
+}
+.deci {
+}
+.centi {
+}
+.milli {
+}
+.micro {
+}
+.nano {
+}
+.pico {
+}
+
+/*  POSH (Plain Old Symantic HTML)
+    Headers
+---------------------------------------- */
+#{headings()}, .btn, nav a, .submit {
+  text-rendering: optimizeLegibility;
+  .wf-loading & {
+    visibility: hidden;
+  }
+  .wf-active &, .wf-inactive & {
+    visibility: visible;
+  }
+}
+#{headings()} {
+  a {
+    border: none;
+    &:hover, &:focus {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}

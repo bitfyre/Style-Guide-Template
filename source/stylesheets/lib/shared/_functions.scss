@@ -1,0 +1,32 @@
+$font-size: 12 !default;
+
+// Functions -----------------------------------------------------------------
+
+//**
+// Returns a the equivalent size in ems of a pixel measurement based on context 
+// @param $px The measurement in pixels to be converted
+// @param $context The font-size in pixels of the Context of the measurement 
+//    to be converted. defaults to $font-size
+//  @return $ems The measurement in ems
+@function pxs2ems($px: 0, $context: $base-font-size) {
+  $ems: ($px / $context) * 1em;
+  @return $ems;
+}
+
+//**
+//  Returns the opposite position orientation
+//  @param $orientation position value as a string: `top`, `right`, `bottom`, or `left`
+//  @return string of `bottom`, `left`, `top`, or `right`
+@function opposite-pos($orientation) {
+  @if $orientation == 'top' {
+    @return 'bottom';
+  } @else if $orientation == 'right' {
+    @return 'left';
+  } @else if $orientation == 'bottom' {
+    @return 'top';
+  } @else if $orientation == 'left' {
+    @return 'right';
+  } @else {
+    @warn "#{$orientation} is not a valid parameter. \n opposite-pos() only takes a value `top`, `right`, `bottom`, or `left`";
+  }
+}

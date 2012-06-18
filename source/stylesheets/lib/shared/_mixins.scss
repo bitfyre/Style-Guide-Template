@@ -1,0 +1,46 @@
+// Mixins --------------------------------------------------------------------
+
+//**
+// This provides an accessible, reusable way to visually hide elements.
+// @param none
+// This provides an accessible, reusable way to visually hide elements.
+//  `visually-hidden` should only be used when it is apparent to sighted users.
+//  If that is not the case the item should be redesigned
+@mixin visually-hidden() {
+  position:absolute;
+  left:-999em;
+  top:auto;
+  width:1px;
+  height:1px;
+//  overflow:hidden;
+}
+
+//**
+// This provides an semi-accessible, reusable way to replace text with 
+// background image text.
+// @param $image The name of the image e.g. sprite.png
+// @param $horz-pos the horizontal positioning of the background images
+// @param $vert-pos the vertical positioning of the background images
+// @param $width The width of the element being replaced
+// @param $height The height of the element being replaced
+@mixin image-replace($image,$horz-pos,$vert-pos, $width, $height) {
+  width: $width;
+  height: $height;
+  text-indent: -9990px;
+  background: {
+    image: image-url($image);
+    position: $horz-pos $vert-pos;
+    repeat: no-repeat;
+  }
+}
+
+//**
+//  wrap mixin for sizing and positioning main wrapper
+//  @param $wrap-width: Add docs to container!
+
+@mixin wrap($wrap-width) {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: left;
+  max-width: $wrap-width;
+}
