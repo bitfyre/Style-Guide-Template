@@ -14,3 +14,8 @@ License
 ### Everything else:
 
 MIT/GPL license
+=======
+Style-Guide-Template
+====================
+
+Unnamed Style Guide Template
