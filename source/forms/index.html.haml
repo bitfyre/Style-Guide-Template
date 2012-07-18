@@ -1,0 +1,182 @@
+- content_for :head do
+  %title Forms
+
+%h1 Forms
+
+%form#test-form{:action => "#", :method => "post"}
+  %h2 Form Elements
+  %p Battery of form elements, including new html5 elements. We certainly won't use all of them, but it's good to have them included here.
+  %ol
+    %li
+      %label{:for => "text_field"} Text Field
+      %input{:type => "text", :name => "text_field", :id => "text_field"}
+    %li
+      %label{:for => "text_area"} Text Area
+      %textarea#text_area{:name => "text_area"}
+    %li
+      %label{:for => "select_element"} Select Element
+      %select{:name => "select_element", :id => "select_element"}
+        %optgroup{:label => "Select a Value"}
+          %option{:value => "value_1"} Value 1
+          %option{:value => "value_2"} Value 2
+          %option{:value => "value_3"} Value 3
+          %option{:value => "value_4"} Value 4
+          %option{:value => "value_5"} Value 5
+    %li
+      %label{:for => "multi_select_element"} Multi Select Element
+      %select{:name => "multi_select_element", :id => "multi_select_element", :multiple => "multiple", :size => "4"}
+        %optgroup{:label => "Select a Value"}
+          %option{:value => "value_1"} Value 1
+          %option{:value => "value_2"} Value 2
+          %option{:value => "value_3"} Value 3
+          %option{:value => "value_4"} Value 4
+          %option{:value => "value_5"} Value 5
+    %li.radio
+      %label{:for => "radio"} Radio Buttons
+      %ul
+        %li
+          %label{:for => "radio-1"} Radio 1
+          %input{:type => "radio", :name => "radio", :value => "radio-1", :id => "radio-1"}
+        %li
+          %label{:for => "radio-2"} Radio 2
+          %input{:type => "radio", :name => "radio", :value => "radio-2", :id => "radio-2"}
+        %li
+          %label{:for => "radio-3"} Radio 3
+          %input{:type => "radio", :name => "radio", :value => "radio-3", :id => "radio-3"}
+    %li.checkbox
+      %label{:for => "checkboxes"} Checkboxes
+      %ul
+        %li
+          %label{:for => "checkbox-1"} Checkbox 1
+          %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-1", :id => "checkbox-1"}
+        %li
+          %label{:for => "checkbox-2"} Checkbox 2
+          %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-2", :id => "checkbox-2"}
+        %li
+          %label{:for => "checkbox-3"} Checkbox 3
+          %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-3", :id => "checkbox-3"}
+    %li
+      %label{:for => "password"} Password
+      %input{:type => "password", :name => "password", :id => "password"}
+    %li
+      %label{:for => "file"} File Input
+      %input{:type => "file", :name => "file", :id => "file"}
+    %li
+      %label{:for => "date"} Date Input
+      %input{:type => "date", :name => "date", :id => "date"}
+    %li
+      %label{:for => "datetime"} Datetime Input
+      %input{:type => "datetime", :name => "datetime", :id => "datetime", :placeholder => "1970-01-01T00:00:00Z"}
+    %li
+      %label{:for => "datetime-local"} Datetime Local Input
+      %input{:type => "datetime-local", :name => "datetime-local", :id => "datetime-local", :placeholder => "1970-01-01T00:00"}
+    %li
+      %label{:for => "week"} Week Input
+      %input{:type => "week", :name => "datetime-local", :id => "week"}
+    %li
+      %label{:for => "month"} Month Input
+      %input{:type => "month", :name => "month", :id => "month"}
+    %li
+      %label{:for => "time"} Time Input
+      %input{:type => "time", :name => "time", :id => "time"}
+    %li
+      %label{:for => "number"} Number Input
+      %input{:type => "number", :name => "number", :id => "number"}
+    %li
+      %label{:for => "tel"}
+        Telephone Input
+        %abbr{:title => "Required"} *
+      %input{:type => "tel", :name => "tel", :id => "tel", :required => "required"}
+    %li
+      %label{:for => "url"} URL Input
+      %input{:type => "url", :name => "url", :id => "url"}
+    %li
+      %label{:for => "email"}
+        Email Input
+        %abbr{:title => "Required"} *
+      %input{:type => "email", :name => "email", :id => "email", :required => "required"}
+    %li
+      %label{:for => "color"} Color input
+      %input#color{:type => "color", :name => "color"}
+    %li
+      %label{:for => "range"} Range input
+      %input#range{:type => "range", :value => "10", :name => "range"}/
+    %li
+      %fieldset
+        %legend Clickable inputs and buttons
+        %ol
+          %li
+            %input{:alt => "Image (input)", :src => "http://placekitten.com/90/24", :type => "image"}/
+          %li
+            %input{:type => "reset", :value => "Reset (input)"}/
+          %li
+            %input{:type => "button", :value => "Button (input)"}/
+          %li
+            %input{:type => "submit", :value => "Submit (input)"}/
+          %li
+            %button{:type => "reset"} Reset (button)
+          %li
+            %button{:type => "button"} Button (button)
+          %li
+            %button{:type => "submit"} Submit (button)
+    %li
+      %fieldset#boxsize
+        %legend box-sizing tests
+        %ol
+          %li
+            %input{:type => "text", :placeholder => "text"}/
+          %li
+            %input{:type => "email", :placeholder => "email"}/
+          %li
+            %input{:type => "search", :placeholder => "search"}/
+          %li
+            %input{:type => "url", :placeholder => "http://example.com"}/
+          %li
+            %input{:type => "password", :placeholder => "password"}/
+          %li
+            %input{:type => "color", :placeholder => "#000000"}/
+          %li
+            %input{:type => "number", :placeholder => "5"}/
+          %li
+            %input{:type => "range", :placeholder => "10"}/
+          %li
+            %input{:type => "date", :placeholder => "1970-01-01"}/
+          %li
+            %input{:type => "month", :placeholder => "1970-01"}/
+          %li
+            %input{:type => "week", :placeholder => "1970-W01"}/
+          %li
+            %input{:type => "datetime", :placeholder => "1970-01-01T00:00:00Z"}/
+          %li
+            %input{:type => "datetime-local", :placeholder => "1970-01-01T00:00"}/
+          %li
+            %input{:type => "radio"}/
+          %li
+            %input{:type => "checkbox"}/
+          %li
+            %select
+              %option Option 01
+              %option Option 02
+          %li
+            %textarea{:cols => "30", :rows => "5"} Textarea text
+          %li
+            %input{:alt => "Image (input)", :src => "http://placekitten.com/90/24", :type => "image"}/
+          %li
+            %input{:type => "reset", :value => "Reset (input)"}/
+          %li
+            %input{:type => "button", :value => "Button (input)"}/
+          %li
+            %input{:type => "submit", :value => "Submit (input)"}/
+          %li
+            %button{:type => "reset"} Reset (button)
+          %li
+            %button{:type => "button"} Button (button)
+          %li
+            %button{:type => "submit"} Submit (button)
+    %li
+      %button{:type => "submit"} Submit
+      %button{:type => "reset"} Reset
+  %p.required
+    %dfn *
+    required field
+
