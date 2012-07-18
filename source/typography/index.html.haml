@@ -1,0 +1,456 @@
+- content_for :head do
+  %title Typography
+%h1 Typography
+
+%h1 A battery of good typography tests
+%header
+  %hgroup
+    %h1 Grouped Heading 
+    %h2 And Sub-Heading
+  /
+    %nav
+      %ul
+        %li
+          %a{:href => "#"} navigation item #1
+        %li
+          %a{:href => "#"} navigation item #2
+        %li
+          %a{:href => "#"} navigation item #3
+%h1 Heading 1
+%p= lorem.paragraph
+%h2 Heading 2
+%p= lorem.paragraph
+%h3 Heading 3
+%p= lorem.paragraph
+%h4 Heading 4
+%p= lorem.paragraph
+%h5 Heading 5
+%p= lorem.paragraph
+%h6 Heading 6
+%p= lorem.paragraph
+
+%h1 Class Based Headings
+
+%h1.peta Peta
+%p= lorem.paragraph
+%h1.tera Tera
+%p= lorem.paragraph
+%h1.giga Giga
+%p= lorem.paragraph
+%h1.mega Mega
+%p= lorem.paragraph
+%h1.kilo Kilo
+%p= lorem.paragraph
+%h1.hecto Hecto
+%p= lorem.paragraph
+%h1.deca Deca
+%p= lorem.paragraph
+%h1.deci Deci
+%p= lorem.paragraph
+%h1.centi Centi
+%p= lorem.paragraph
+%h1.milli Milli
+%p= lorem.paragraph
+%h1.micro Micro
+%p= lorem.paragraph
+%h1.nano Nano
+%p= lorem.paragraph
+%h1.pico Pico
+%p= lorem.paragraph
+
+/
+  %p{:hidden => ""} This should be hidden in all browsers, apart from IE6
+  %section
+    %h1 Section Heading 1
+    %article
+      %h4 Article Heading 2
+      %address Address: somewhere, world
+      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.
+      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.
+  %h1 Text-level semantics
+  %p
+    The
+    %a{:href => "#"} a element
+    example
+    %br/
+    The
+    %abbr abbr element
+    and
+    %abbr{:title => "Title text"} abbr element with title
+    examples
+    %br/
+    The
+    %b b element
+    example
+    %br/
+    The
+    %cite cite element
+    example
+    %br/
+    The
+    %code code element
+    example
+    %br/
+    The
+    %del del element
+    example
+    %br/
+    The
+    %dfn dfn element
+    and
+    %dfn{:title => "Title text"} dfn element with title
+    examples
+    %br/
+    The
+    %em em element
+    example
+    %br/
+    The
+    %i i element
+    example
+    %br/
+    The img element
+    %img{:alt => "", :src => "http://placekitten.com/16/16"}/
+    example
+    %br/
+    The
+    %ins ins element
+    example
+    %br/
+    The
+    %kbd kbd element
+    example
+    %br/
+    The
+    %mark mark element
+    example
+    %br/
+    The
+    %q
+      q element
+      %q inside
+      a q element
+    example
+    %br/
+    The
+    %s s element
+    example
+    %br/
+    The
+    %samp samp element
+    example
+    %br/
+    The
+    %small small element
+    example
+    %br/
+    The
+    %span span element
+    example
+    %br/
+    The
+    %strong strong element
+    example
+    %br/
+    The
+    %sub sub element
+    example
+    %br/
+    The
+    %sup sup element
+    example
+    %br/
+    The
+    %var var element
+    example
+    %br/
+    The
+    %u u element
+    example
+  %h1 Embedded content
+  %h3 audio
+  %audio{:controls => ""}
+  %audio
+  %h3 img
+  %img{:alt => "", :src => "http://placekitten.com/100/100"}/
+  %a{:href => "#"}
+    %img{:alt => "", :src => "http://placekitten.com/100/100"}/
+  %h3 svg
+  %svg{:height => "100px", :width => "100px"}
+    %circle{:cx => "100", :cy => "100", :fill => "#ff0000", :r => "100"}
+  %h3 video
+  %video{:controls => ""}
+  %video
+  %h1 Grouping content
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.
+  %h3 pre
+  %pre Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.
+  %pre
+    %code
+      :preserve
+        &lt;html>
+          &lt;head>
+          &lt;/head>
+          &lt;body>
+            &lt;div class="main"> &lt;div>
+          &lt;/body>
+        &lt;/html>
+  %h3 blockquote
+  %blockquote
+    %p Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.
+  %blockquote Even better philosophical quote marked up with just a &lt;blockquote> element.
+  %h3 ordered list
+  %ol
+    %li list item 1
+    %li
+      list item 1
+      %ol
+        %li list item 2
+        %li
+          list item 2
+          %ol
+            %li list item 3
+            %li list item 3
+        %li list item 2
+        %li list item 2
+    %li list item 1
+    %li list item 1
+  %h3 unordered list
+  %ul
+    %li list item 1
+    %li
+      list item 1
+      %ul
+        %li list item 2
+        %li
+          list item 2
+          %ul
+            %li list item 3
+            %li list item 3
+        %li list item 2
+        %li list item 2
+    %li list item 1
+    %li list item 1
+  %h3 description list
+  %dl
+    %dt Description name
+    %dd Description value
+    %dt Description name
+    %dd Description value
+    %dd Description value
+    %dt Description name
+    %dt Description name
+    %dd Description value
+  %h3 figure
+  %figure
+    %img{:alt => "", :src => "http://placekitten.com/400/200"}/
+    %figcaption Figcaption content
+  %h1 Tabular data
+  %table
+    %caption Jimi Hendrix - albums
+    %thead
+      %tr
+        %th Album
+        %th Year
+        %th Price
+    %tfoot
+      %tr
+        %th Album
+        %th Year
+        %th Price
+    %tbody
+      %tr
+        %td Are You Experienced
+        %td 1967
+        %td $10.00
+      %tr
+        %td Axis: Bold as Love
+        %td 1967
+        %td $12.00
+      %tr
+        %td Electric Ladyland
+        %td 1968
+        %td $10.00
+      %tr
+        %td Band of Gypsys
+        %td 1970
+        %td $12.00
+  %h1 Forms
+
+  %form#test-form{:action => "#", :method => "post"}
+    %h2 Form Elements
+    %p Battery of form elements, including new html5 elements. We certainly won't use all of them, but it's good to have them included here.
+    %ol
+      %li
+        %label{:for => "text_field"} Text Field
+        %input{:type => "text", :name => "text_field", :id => "text_field"}
+      %li
+        %label{:for => "text_area"} Text Area
+        %textarea
+      %li
+        %label{:for => "select_element"} Select Element
+        %select{:name => "select_element", :id => "select_element"}
+          %optgroup{:label => "Select a Value"}
+            %option{:value => "value_1"} Value 1
+            %option{:value => "value_2"} Value 2
+            %option{:value => "value_3"} Value 3
+            %option{:value => "value_4"} Value 4
+            %option{:value => "value_5"} Value 5
+      %li
+        %label{:for => "multi_select_element"} Multi Select Element
+        %select{:name => "multi_select_element", :id => "multi_select_element", :multiple => "multiple", :size => "4"}
+          %optgroup{:label => "Select a Value"}
+            %option{:value => "value_1"} Value 1
+            %option{:value => "value_2"} Value 2
+            %option{:value => "value_3"} Value 3
+            %option{:value => "value_4"} Value 4
+            %option{:value => "value_5"} Value 5
+      %li.radio
+        %label{:for => "radio"} Radio Buttons
+        %ul
+          %li
+            %label{:for => "radio-1"} Radio 1
+            %input{:type => "radio", :name => "radio", :value => "radio-1", :id => "radio-1"}
+          %li
+            %label{:for => "radio-2"} Radio 2
+            %input{:type => "radio", :name => "radio", :value => "radio-2", :id => "radio-2"}
+          %li
+            %label{:for => "radio-3"} Radio 3
+            %input{:type => "radio", :name => "radio", :value => "radio-3", :id => "radio-3"}
+      %li.checkbox
+        %label{:for => "checkboxes"} Checkboxes
+        %ul
+          %li
+            %label{:for => "checkbox-1"} Checkbox 1
+            %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-1", :id => "checkbox-1"}
+          %li
+            %label{:for => "checkbox-2"} Checkbox 2
+            %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-2", :id => "checkbox-2"}
+          %li
+            %label{:for => "checkbox-3"} Checkbox 3
+            %input{:type => "checkbox", :name => "checkbox", :value => "checkbox-3", :id => "checkbox-3"}
+      %li
+        %label{:for => "password"} Password
+        %input{:type => "password", :name => "password", :id => "password"}
+      %li
+        %label{:for => "file"} File Input
+        %input{:type => "file", :name => "file", :id => "file"}
+      %li
+        %label{:for => "date"} Date Input
+        %input{:type => "date", :name => "date", :id => "date"}
+      %li
+        %label{:for => "datetime"} Datetime Input
+        %input{:type => "datetime", :name => "datetime", :id => "datetime", :placeholder => "1970-01-01T00:00:00Z"}
+      %li
+        %label{:for => "datetime-local"} Datetime Local Input
+        %input{:type => "datetime-local", :name => "datetime-local", :id => "datetime-local", :placeholder => "1970-01-01T00:00"}
+      %li
+        %label{:for => "Week"} Week Input
+        %input{:type => "datetime-local", :name => "datetime-local", :id => "datetime-local"}
+      %li
+        %label{:for => "month"} Month Input
+        %input{:type => "month", :name => "month", :id => "month"}
+      %li
+        %label{:for => "time"} Time Input
+        %input{:type => "time", :name => "time", :id => "time"}
+      %li
+        %label{:for => "number"} Number Input
+        %input{:type => "number", :name => "number", :id => "number"}
+      %li
+        %label{:for => "tel"}
+          Telephone Input
+          %abbr{:title => "Required"} *
+        %input{:type => "tel", :name => "tel", :id => "tel", :required => "required"}
+      %li
+        %label{:for => "url"} URL Input
+        %input{:type => "url", :name => "url", :id => "url"}
+      %li
+        %label{:for => "email"}
+          Email Input
+          %abbr{:title => "Required"} *
+        %input{:type => "email", :name => "email", :id => "email", :required => "required"}
+      %li
+        %label{:for => "color"} Color input
+        %input#color{:type => "color", :name => "color"}
+      %li
+        %label{:for => "range"} Range input
+        %input#range{:type => "range", :value => "10", :name => "range"}/
+      %li
+        %fieldset
+          %legend Clickable inputs and buttons
+          %ol
+            %li
+              %input{:alt => "Image (input)", :src => "http://placekitten.com/90/24", :type => "image"}/
+            %li
+              %input{:type => "reset", :value => "Reset (input)"}/
+            %li
+              %input{:type => "button", :value => "Button (input)"}/
+            %li
+              %input{:type => "submit", :value => "Submit (input)"}/
+            %li
+              %button{:type => "reset"} Reset (button)
+            %li
+              %button{:type => "button"} Button (button)
+            %li
+              %button{:type => "submit"} Submit (button)
+      %li
+        %fieldset#boxsize
+          %legend box-sizing tests
+          %ol
+            %li
+              %input{:type => "text", :value => "text"}/
+            %li
+              %input{:type => "email", :value => "email"}/
+            %li
+              %input{:type => "search", :value => "search"}/
+            %li
+              %input{:type => "url", :value => "http://example.com"}/
+            %li
+              %input{:type => "password", :value => "password"}/
+            %li
+              %input{:type => "color", :value => "#000000"}/
+            %li
+              %input{:type => "number", :value => "5"}/
+            %li
+              %input{:type => "range", :value => "10"}/
+            %li
+              %input{:type => "date", :value => "1970-01-01"}/
+            %li
+              %input{:type => "month", :value => "1970-01"}/
+            %li
+              %input{:type => "week", :value => "1970-W01"}/
+            %li
+              %input{:type => "datetime", :value => "1970-01-01T00:00:00Z"}/
+            %li
+              %input{:type => "datetime-local", :value => "1970-01-01T00:00"}/
+            %li
+              %input{:type => "radio"}/
+            %li
+              %input{:type => "checkbox"}/
+            %li
+              %select
+                %option Option 01
+                %option Option 02
+            %li
+              %textarea{:cols => "30", :rows => "5"} Textarea text
+            %li
+              %input{:alt => "Image (input)", :src => "http://placekitten.com/90/24", :type => "image"}/
+            %li
+              %input{:type => "reset", :value => "Reset (input)"}/
+            %li
+              %input{:type => "button", :value => "Button (input)"}/
+            %li
+              %input{:type => "submit", :value => "Submit (input)"}/
+            %li
+              %button{:type => "reset"} Reset (button)
+            %li
+              %button{:type => "button"} Button (button)
+            %li
+              %button{:type => "submit"} Submit (button)
+      %li
+        %button{:type => "submit"} Submit
+        %button{:type => "reset"} Reset
+    %p.required
+      %dfn *
+      required field
+
